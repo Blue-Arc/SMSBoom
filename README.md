@@ -9,57 +9,7 @@
 5. 友好的命令行参数支持.  
 6. 采用方便的 pipenv 包管理.  
 
-## Quick Start
-
-### 适用于小白
-
-✨本项目已经使用 `pyinstaller` 打包成 `EXE` 可执行文件!免去部署 Python 环境的烦恼,适合用于小白白.  
-
-🔨作者的打包环境为: `Windows 10 x64 Python3.8` 如果 Windows 系统不是 **Windows 10 64位** 版本,**可能会运行失败**! 如果出现异常报错请截图发 Issue.
-
-1. 下载 EXE 可执行文件  
-  请移步到项目的 [release页](https://github.com/AdminWhaleFall/SMSBoom/releases) 下载
-  
-  > 若遇到国内网络环境下载不下来,请参见 [https://github.do/](https://github.do/) 等加速镜像.
-  
-2. 运行  
-
-   1. 在任意盘(**除C盘外**)中新建一个文件夹.将程序移动到其中. e.g.  
-   ![](https://cdn.jsdelivr.net/gh/AdminWhaleFall/SMSBoom@master/img/e.g.1.png)
-  
-   2. `Win`+`R` 打开cmd.输入存放的盘符.例如: `E:` 然后cd到文件夹,例如 `cd SMS`
-   ![](https://cdn.jsdelivr.net/gh/AdminWhaleFall/SMSBoom@master/img/cmd1.png)
-   
-   3. 确认 cmd 路径是 EXE 所在路径后,cmd 输入:`smsboom_pyinstall.exe`,若出现命令提示,则说明脚本已正常运行. 
-   ![](https://cdn.jsdelivr.net/gh/AdminWhaleFall/SMSBoom@master/img/cmd2.png)
-
-   5. 使用前必须更新一遍最新接口
-    ```shell
-    smsboom_install.exe update
-    ```  
-    > 若更新接口出现错误 `ssl_`,请参见 [issue](https://github.com/AdminWhaleFall/SMSBoom/issues/2) **关闭代理软件**再 update.
-
-   7. 传递参数,命令示例:
-
-    启动64个线程,轰炸一个人的手机号(198xxxxxxxx),只轰炸一波。
-   ```shell
-   smsboom_install.exe run -t 64 -p 198xxxxxxxxx
-   ```
-
-   启动64个线程,轰炸多个人的手机号(19xxxxxxx),启动循环轰炸，每个循环间隔60秒  
-
-   ```shell
-   smsboom_install.exe run -t 64 -p 198xxxxxxxxx -s -i 60
-   ```
-
-   启动64个线程,轰炸多个人的手机号(138xxx,139xxxx),启动循环轰炸,每个循环间隔60秒。  
-
-   ```shell
-   smsboom_install.exe run -t 64 -p 138xxxxxxxx -p 139xxxxxxxx -s -i 60
-   ```
-
-
-### 大佬运行 
+### 运行 
 
 - 方法一：使用Git:  
 
@@ -187,4 +137,4 @@ pipenv run python flask_app/app.py
 `/testapi/`:POST 给定抓取的api，测试请求。  
 `/submitapi/`:POST 提交当前的api到 api.json 文件。  
 
-
+原作者: [AdminWhaleFall/SMSBoom](https://github.com/AdminWhaleFall/SMSBoom)
