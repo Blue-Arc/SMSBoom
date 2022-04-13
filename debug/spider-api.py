@@ -1,17 +1,19 @@
 #!/usr/bin/python python3
 # coding=utf-8
 # 爬取轰炸平台接口
-from loguru import logger
-import httpx
 import re
-from utils import Sql
-import queue
-import pathlib
-import threading
 import sys
 import json
-from prettytable import PrettyTable
+import queue
+import httpx
+import time
 import click
+import pathlib
+import threading
+from utils import Sql
+from tqdm import tqdm
+from loguru import logger
+from prettytable import PrettyTable
 
 # logger config
 logger.remove()
@@ -103,8 +105,6 @@ class SMS(object):
         for thread in threads:
             thread.start()
         logger.info("多线程校验进行中......(可能耗时比较长)")
-        from tqdm import tqdm
-        import time
         with tqdm(total=self.size) as pbar:
             while not self.api_queue.empty():
                 pbar.update(self.size-self.api_queue.qsize())
