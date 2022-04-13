@@ -1,5 +1,3 @@
-![logo](https://cdn.jsdelivr.net/gh/AdminWhaleFall/SMSBoom@master/img/smsboom-logo.png)
-
 ![test](img/test2.gif)
 
 ## Feature
@@ -189,9 +187,4 @@ pipenv run python flask_app/app.py
 `/testapi/`:POST 给定抓取的api，测试请求。  
 `/submitapi/`:POST 提交当前的api到 api.json 文件。  
 
-## 企鹅🐧群
-
-欢迎加入企鹅群提出问题和建议！！！
-
-![企鹅群 QR](https://cdn.jsdelivr.net/gh/AdminWhaleFall/Pic@master/img/20220409151539.jpg)
 
