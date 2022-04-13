@@ -12,6 +12,7 @@ click = "*"
 loguru = "*"
 urllib3 = "*"
 prettytable = "*"
+tqdm = "*"
 
 [dev-packages]
 
