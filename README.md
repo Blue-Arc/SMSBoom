@@ -14,16 +14,15 @@
 - 方法一：使用Git:  
 
 ```shell
-git clone https://github.com/AdminWhaleFall/SMSBoom.git/
+git clone https://github.com/Blue-Arc/SMSBoom.git/
 ```  
 
 > 墙国加速
 >  
 > ```shell
-> git clone https://github.do/https://github.com/AdminWhaleFall/SMSBoom.git
+> git clone https://github.do/https://github.com/Blue-Arc/SMSBoom.git
 > ```  
 
-- 方法二：点击下载[项目压缩包](https://github.com/AdminWhaleFall/SMSBoom/archive/refs/heads/master.zip)并解压.  
 
 ### 配置环境  
 
