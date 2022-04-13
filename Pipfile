@@ -11,6 +11,7 @@ pydantic = "*"
 click = "*"
 loguru = "*"
 urllib3 = "*"
+prettytable = "*"
 
 [dev-packages]
 
