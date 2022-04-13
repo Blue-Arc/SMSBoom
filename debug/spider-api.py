@@ -3,7 +3,6 @@
 # 爬取轰炸平台接口
 from loguru import logger
 import httpx
-import requests
 import re
 from utils import Sql
 import queue
@@ -13,8 +12,6 @@ import sys
 import json
 from prettytable import PrettyTable
 import click
-import urllib3
-urllib3.disable_warnings()
 
 # logger config
 logger.remove()
@@ -84,7 +81,7 @@ class SMS(object):
         while not self.api_queue.empty():
             api = self.api_queue.get()
             try:
-                with requests.get(api.replace("[phone]", self.default_phone), headers=self.header, timeout=8, verify=False) as resp:
+                with httpx.get(api.replace("[phone]", self.default_phone), headers=self.header, timeout=8, verify=False) as resp:
                     if resp.status_code == 200:
                         with self.lock:
                             self.db.update(api)
